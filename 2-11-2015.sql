@@ -1,0 +1,124 @@
+--use DB01HMs79
+--create proc sp_Team2AddTestID
+--(
+--	@cTestId int,
+--	@vId int
+--)
+--as
+--begin
+--update Team2_CreateCP set cTestId = @cTestId where vId = @vId
+--end
+--select * from Team2_Employee
+--select * from Team2_CreateCP
+--select * from Team2_Login
+--create proc sp_Team2getTAId
+--as
+--begin
+--select eId from Team2_Employee where isTestAdmin = 1
+--end
+--create proc sp_team2ADDTestAdmin
+--(
+--	@password varchar(30),
+--	@username varchar(30),
+--	@designation varchar(30)
+--)
+--as
+--begin
+--insert into Team2_Login values(@username,@password,@designation)
+--end
+
+--2/12/2105
+--create proc sp_Team2Displaydata
+--(
+--	@cPId int,
+--	@vId int,
+--	@cName varchar(30),
+--	@cDOB datetime,
+--	@cLocation varchar(30),
+--	@cGender varchar(30),
+--	@cPTenth float,
+--	@cPTwelth float,
+--	@cGapInEdu varchar(30),
+--	@cGapReasonEdu varchar(100) ,
+--	@cGapEduYear int ,
+--	@cGapInExp varchar(30),
+--	@cGapReasonExp varchar(100),
+--	@cGapExpYear int,
+--	@cExperience int,
+--	@cResume varchar(30),
+--	@cTestId int,
+--	@cTestStatus int,
+--	@cMedicalTestStatus int,
+--    @cBGCTestID int,
+--    @cBGCTestStatus int,
+--	@WrittenTestStatus varchar(30),
+--	@TechnicalTestStatus varchar(30),
+--	@HRTestStatus varchar(30)
+--)
+--as
+--begin
+--insert into Team2_CreateCP values
+--(
+--	@cPId,
+--	@vId,
+--	 @cName,
+--	@cDOB,
+--	@cLocation ,
+--	@cGender,
+--	@cPTenth ,
+--	@cPTwelth ,
+--	@cGapInEdu ,
+--	@cGapReasonEdu ,
+--	 @cGapEduYear ,
+--	@cGapInExp ,
+--	@cGapReasonExp ,
+--	@cGapExpYear,
+--	@cExperience ,
+--	@cResume,
+--	@cTestId ,
+--	@cTestStatus ,
+--	@cMedicalTestStatus ,
+--   @cBGCTestID ,
+--   @cBGCTestStatus,
+--	@WrittenTestStatus ,
+--	 @TechnicalTestStatus ,
+--	@HRTestStatus
+--	)
+--end
+
+--select * from Team2_Login
+--create table Team2_Login
+--(
+--	username int,
+--	password varchar(30),
+--	designation varchar(30)
+--)
+--insert into Team2_Login values(864156,'tcshyd','hr');
+--insert into Team2_Login values(864157,'tcshyd','testadmin');
+--insert into Team2_Login values(864158,'tcshyd','placementconsultant');
+--create proc sp_team2DeleteTestAdmin
+--(
+--@EID int 
+--)
+--as
+--begin
+--delete from Team2_Login where username = @EID
+--end
+--create proc sp_team2GetEmpIDtable
+--(
+--	@EID int
+--)
+--as
+--begin
+--select * from Team2_Employee where eId = @EID
+--end
+--create proc sp_team2UpdateMS
+--(
+--	@MS int,
+--	@CPID int
+--)
+--as
+--begin
+--update Team2_CreateCP set cMedicalStatus = @MS where cPId = @CPID
+--end
+--update Team2_CreateCP set cMedicalStatus = 0;
